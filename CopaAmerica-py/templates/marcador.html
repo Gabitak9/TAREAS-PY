@@ -1,0 +1,29 @@
+$def with(equipos,nombres,error=None,data=dict())
+
+$if error=="error":
+	<div class="alert alert-danger">
+			<strong>Error:</strong> Debe ingresar goles de ambos equipos.
+	</div>
+<h1> Sistema de registro de partidos </h1><br>
+<form class="form-horizontal" role="form" method="post">
+ <div class="form-group">
+	<label for="campoarticulo1" class="col-sm-2 control-label">Goles de $nombres[0]</label>
+	<div class="col-sm-2">
+   	<input type="text" class="form-control" name="equipo1" id="campoequipo1" placeholder="Goles actuales" value="">
+	</div>
+</div>
+<div class="form-group">
+	<label for="campoarticulo2" class="col-sm-2 control-label">Goles de $nombres[1]</label>
+	<div class="col-sm-2">
+    <input type="text" class="form-control" name="equipo2" id="campoequipo2" placeholder="Goles actuales" value="">
+	</div>
+
+	
+</div>
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-1">
+		<button type="submit" class="btn btn-default">Guardar Goles</button>
+	</div>
+</div>
+ </form>
+     

@@ -1,0 +1,42 @@
+$def with(equipos,error=None,data=dict())
+  $if error=="error":
+    <div class="alert alert-danger">
+        <strong>Error:</strong> Debe ingresar todos los datos correctamente para registrar un partido.
+    </div>
+  <form class="form-horizontal" role="form" method="post">
+		<h3> Equipo 1 </h3>
+		<div class="form-group">
+			<label for="campoequipo" class="col-sm-2 control-label">Equipos</label>
+			<div class="col-sm-3">
+				<select class="form-control" name="equipo1">
+          <option>Selecciona un equipo...</option>
+        $for i in equipos:
+          $if data['equipo1'] == i:
+            <option selected>$:i</option>
+          $else:
+            <option>$:i</option>
+        </select>
+			</div>
+		</div>
+		<h3> Equipo 2 </h3>
+		<div class="form-group">
+			<label for="campoequipo" class="col-sm-2 control-label">Equipos</label>
+			<div class="col-sm-3">
+				<select class="form-control" name="equipo2">
+          <option>Selecciona un equipo...</option>
+        $for i in equipos:
+          $if data['equipo2'] == i:
+            <option selected>$:i</option>
+          $else:
+            <option>$:i</option>
+        </select>
+			</div>
+		</div>
+		
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-default">Crear Partido</button>
+			</div>
+		</div>
+	</form>

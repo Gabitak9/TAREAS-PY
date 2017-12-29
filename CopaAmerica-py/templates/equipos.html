@@ -1,0 +1,31 @@
+$def with(tipos,error=None,data=dict())
+  $if error=="error":
+    <div class="alert alert-danger">
+        <strong>Error:</strong> Debe ingresar todos los datos de forma correcta para registrar un equipo.
+    </div>
+  <form class="form-horizontal" role="form" method="post">
+		<div class="form-group">
+			<label for="campoequipo" class="col-sm-2 control-label">Nombre Equipo</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" name="equipo" id="campoequipo" placeholder="Ingrese el nombre del equipo" value="$:data['equipo']">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="campogrupo" class="col-sm-2 control-label">Grupo</label>
+			<div class="col-sm-3">
+				<select class="form-control" name="grupo">
+          <option>Selecciona un grupo...</option>
+        $for tipo in tipos:
+          $if data['grupo']==tipo:
+            <option selected>$:tipo</option>
+          $else:
+            <option>$:tipo</option>
+        </select>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-default">Ingresar Equipo</button>
+			</div>
+		</div>
+	</form>

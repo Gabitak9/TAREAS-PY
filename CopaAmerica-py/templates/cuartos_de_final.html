@@ -1,0 +1,45 @@
+$def with(nombre=None,slogan=None,tabla=dict()) 
+
+
+<div class="container">
+  <center><h2>Tabla de Partidos</h2></center>
+  <center><p><b>Tabla con los partidos de cuartos de final</b></p> </center>           
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th align = "center">Equipo1</th>
+        <th align = "center">Equipo2</th>
+        <th align = "center">Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align> $tabla["P1"][0]</td>
+        <td align> $tabla["P1"][1]</td>
+        <td align> $tabla["P1"][2] - $tabla["P1"][3]</td>
+
+      </tr>
+      <tr>
+        <td align> $tabla["P2"][0]</td>
+        <td align> $tabla["P2"][1]</td>
+        <td align> $tabla["P2"][2] - $tabla["P2"][3]</td>
+      </tr>
+      <tr>
+        <td align> $tabla["P3"][0]</td>
+        <td align> $tabla["P3"][1]</td>
+        <td align> $tabla["P3"][2] - $tabla["P3"][3]</td>
+      </tr>
+      <tr>
+        <td align> $tabla["P4"][0]</td>
+        <td align> $tabla["P4"][1]</td>
+        <td align> $tabla["P4"][2] - $tabla["P4"][3]</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>
+

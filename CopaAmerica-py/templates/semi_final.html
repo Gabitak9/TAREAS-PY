@@ -1,0 +1,37 @@
+$def with(nombre=None,slogan=None,tabla=dict()) 
+
+
+<div class="container">
+  <center><h2>Tabla de Partidos</h2></center>
+  <center><p><b>Tabla con los partidos de semifinal</b></p> </center>           
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th align = "center">Equipo1</th>
+        <th align = "center">Equipo2</th>
+        <th align = "center">Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align> $tabla["P5"][0]</td>
+        <td align> $tabla["P5"][1]</td>
+        <td align> $tabla["P5"][2] - $tabla["P5"][3]</td>
+
+      </tr>
+      <tr>
+        <td align> $tabla["P6"][0]</td>
+        <td align> $tabla["P6"][1]</td>
+        <td align> $tabla["P6"][2] - $tabla["P6"][3]</td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>
+
